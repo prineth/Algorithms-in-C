@@ -8,15 +8,15 @@ int i,j,temp;
 
 void bubble(int arr[])
 {
-    for(i=0;i=SIZE-1;i++)
+    for(i=0;i<SIZE-1;i++)
     {
         bool flag = false;
 
-        for(j=0;SIZE-1-i;j++)
+        for(j=0;j<SIZE-1-i;j++)
         {
             if(arr[j]>arr[j+1])
             {
-                temp = arr[i];
+                temp = arr[j];
                 arr[j] = arr[j+1];
                 arr[j+1] = temp;
                 flag = true;
@@ -30,14 +30,14 @@ void bubble(int arr[])
         }
 
     }
+
     ///sorted array
     printf("Sorted array \n\n");
 
-    for(int x=0; x < SIZE; x++)
+    for(int i=0;i<SIZE;i++)
     {
-        printf("%d ",arr[x]);
+        printf("%d ",arr[i]);
     }
-
 }
 
 
@@ -45,7 +45,6 @@ void bubble(int arr[])
 int main()
 {
     int arr[SIZE] = {15,16,6,8,5};
-
     bubble(arr);
 
     return 0;
